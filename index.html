@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-      :root {
+    :root {
       --cream: #F5F0E8;
       --warm-white: #FAF8F4;
       --clay: #C4845A;
@@ -22,14 +22,13 @@
       --rust: #B85030;
       --linen: #EAE0D0;
       --border: rgba(92,61,46,0.12);
-      --White: rgba(255, 255, 500); 
     }
 
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f8f7f4;
-      color: #1a1a1a;
+      background-color: var(--warm-white);
+      color: var(--charcoal);
     }
 
     .container {
@@ -42,7 +41,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 48px;
       margin-bottom: 50px;
-      color: #C4845A;
+      color: var(--clay);
     }
 
     .project {
@@ -53,17 +52,16 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 32px;
       margin-bottom: 10px;
-      color: #5C3D2E;
+      color: var(--bark);
     }
 
     .project-subtitle {
-      color: #C4845A;
+      color: var(--clay);
       font-size: 15px;
       margin-bottom: 20px;
       max-width: 600px;
     }
 
-    /* NEW: meta pills */
     .project-meta {
       display: flex;
       flex-wrap: wrap;
@@ -72,8 +70,8 @@
     }
 
     .meta-pill {
-      background-color: rgba(235, 208, 190);
-      color: #333;
+      background-color: var(--linen);
+      color: var(--bark);
       padding: 8px 14px;
       border-radius: 999px;
       font-size: 13px;
@@ -83,29 +81,41 @@
     }
 
     .meta-pill:hover {
-      background-color: #e0ded8;
+      background-color: var(--stone);
     }
 
+    /* HERO IMAGE — natural proportions */
     .project-image {
       width: 100%;
+      height: auto;
       border-radius: 18px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      display: block;
     }
 
+    /* MASONRY-STYLE GRID */
     .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
+      column-count: 2;
+      column-gap: 15px;
       margin-top: 10px;
     }
 
     .image-grid img {
       width: 100%;
+      height: auto;
       border-radius: 14px;
+      margin-bottom: 15px;
+      display: block;
+      break-inside: avoid;
+      transition: transform 0.2s ease;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.02);
     }
 
     .project p {
-      color: #5C3D2E;
+      color: var(--bark);
       line-height: 1.6;
       margin-top: 10px;
     }
@@ -114,16 +124,16 @@
       display: inline-block;
       margin-bottom: 30px;
       text-decoration: none;
-      color: #5C3D2E;
+      color: var(--bark);
     }
 
     .back-link:hover {
-      color: #000;
+      color: black;
     }
 
     @media (max-width: 700px) {
       .image-grid {
-        grid-template-columns: 1fr;
+        column-count: 1;
       }
     }
   </style>
@@ -137,7 +147,6 @@
 
   <h1>Projects</h1>
 
-  <!-- PROJECT 1 -->
   <section class="project">
     <div class="project-title">Bob's Red Mill Flour Brand Re-Design</div>
 
@@ -145,7 +154,6 @@
       For this project, I redesigned the visual identity and branding strategy of an existing consumer product, following a full end-to-end branding process from research to final campaign execution.
     </div>
 
-    <!-- NEW PILLS -->
     <div class="project-meta">
       <div class="meta-pill">Date: Feb 5, 2026</div>
       <div class="meta-pill">Client: School Assignment</div>
@@ -160,8 +168,11 @@
 
     <div class="image-grid">
       <img src="Firefly_Gemini Flash_change the background colour do it doesnt blend so much with the product 503956.png" alt="product">
-      <img src="Firefly_Gemini Flash_change the aspect ratio 557445.png">
+      <img src="Firefly_Gemini Flash_change the aspect ratio 557445.png" alt="product">
+      <img src="Bob's red mill re-design-14.png" alt="board">
       <img src="Bob's red mill re-design-12.png" alt="process">
+      <img src="Firefly_Gemini Flash_make me a display for this flour product ensure it has studio lighting 503956.png" alt="product">
+      
     </div>
   </section>
 
